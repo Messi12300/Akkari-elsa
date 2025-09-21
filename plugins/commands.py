@@ -88,6 +88,11 @@ async def send_file(client, query, ident, file_id):
         protect_content=True if ident == 'checksubp' else False,
         reply_markup=reply_markup
     )    
+    k = await message.reply_text("**⚠️ 𝖳𝗁𝗂𝗌 𝗆𝖾𝖽𝗂𝖺 𝗐𝗂𝗅𝗅 𝖻𝖾 𝖽𝖾𝗅𝖾𝗍𝖾𝖽 𝗐𝗂𝗍𝗁𝗂𝗇 <u>5 𝗆𝗂𝗇𝗎𝗍𝖾.</u>**\n__𝖪𝗂𝗇𝖽𝗅𝗒 𝖿𝗈𝗋𝗐𝖺𝗋𝖽 𝗂𝗍 𝗍𝗈 𝗌𝖺𝗏𝖾𝖽 𝗆𝖾𝗌𝗌𝖺𝗀𝖾𝗌.__")
+        await asyncio.sleep(300)
+        await ok.delete()
+        await k.edit("<b>Your File/Video is successfully deleted!!!</b>")
+        return
    
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):   
@@ -263,21 +268,31 @@ async def start(client, message):
             if f_caption is None:
                 f_caption = f"{title}"
             try:
-                await client.send_cached_media(
+                ok = await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
                     )
+                k = await message.reply_text("**⚠️ 𝖳𝗁𝗂𝗌 𝗆𝖾𝖽𝗂𝖺 𝗐𝗂𝗅𝗅 𝖻𝖾 𝖽𝖾𝗅𝖾𝗍𝖾𝖽 𝗐𝗂𝗍𝗁𝗂𝗇 <u>5 𝗆𝗂𝗇𝗎𝗍𝖾.</u>**\n__𝖪𝗂𝗇𝖽𝗅𝗒 𝖿𝗈𝗋𝗐𝖺𝗋𝖽 𝗂𝗍 𝗍𝗈 𝗌𝖺𝗏𝖾𝖽 𝗆𝖾𝗌𝗌𝖺𝗀𝖾𝗌.__")
+                await asyncio.sleep(300)
+                await ok.delete()
+                await k.edit("<b>Your File/Video is successfully deleted!!!</b>")
+                return
             except FloodWait as e:
                 await asyncio.sleep(e.x)
                 logger.warning(f"Floodwait of {e.x} sec.")
-                await client.send_cached_media(
+                ok = await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
                     )
+                k = await message.reply_text("**⚠️ 𝖳𝗁𝗂𝗌 𝗆𝖾𝖽𝗂𝖺 𝗐𝗂𝗅𝗅 𝖻𝖾 𝖽𝖾𝗅𝖾𝗍𝖾𝖽 𝗐𝗂𝗍𝗁𝗂𝗇 <u>5 𝗆𝗂𝗇𝗎𝗍𝖾.</u>**\n__𝖪𝗂𝗇𝖽𝗅𝗒 𝖿𝗈𝗋𝗐𝖺𝗋𝖽 𝗂𝗍 𝗍𝗈 𝗌𝖺𝗏𝖾𝖽 𝗆𝖾𝗌𝗌𝖺𝗀𝖾𝗌.__")
+                await asyncio.sleep(300)
+                await ok.delete()
+                await k.edit("<b>Your File/Video is successfully deleted!!!</b>")
+                return
             except Exception as e:
                 logger.warning(e, exc_info=True)
                 continue
@@ -339,6 +354,11 @@ async def start(client, message):
                 file_id=file_id,
                 protect_content=True if pre == 'filep' else False,
                 )
+            k = await message.reply_text("**⚠️ 𝖳𝗁𝗂𝗌 𝗆𝖾𝖽𝗂𝖺 𝗐𝗂𝗅𝗅 𝖻𝖾 𝖽𝖾𝗅𝖾𝗍𝖾𝖽 𝗐𝗂𝗍𝗁𝗂𝗇 <u>5 𝗆𝗂𝗇𝗎𝗍𝖾.</u>**\n__𝖪𝗂𝗇𝖽𝗅𝗒 𝖿𝗈𝗋𝗐𝖺𝗋𝖽 𝗂𝗍 𝗍𝗈 𝗌𝖺𝗏𝖾𝖽 𝗆𝖾𝗌𝗌𝖺𝗀𝖾𝗌.__")
+            await asyncio.sleep(300)
+            await ok.delete()
+            await k.edit("<b>Your File/Video is successfully deleted!!!</b>")
+            return
             filetype = msg.media
             file = getattr(msg, filetype)
             title = file.file_name
@@ -378,6 +398,11 @@ async def start(client, message):
             InlineKeyboardButton('🖥 Oᴛᴛ Uᴩᴅᴀᴛᴇꜱ Cʜᴀɴɴᴇʟ 🖥', url='https://t.me/+uA5gEKm8WXk1ZTll')
             ]])
     )
+    k = await message.reply_text("**⚠️ 𝖳𝗁𝗂𝗌 𝗆𝖾𝖽𝗂𝖺 𝗐𝗂𝗅𝗅 𝖻𝖾 𝖽𝖾𝗅𝖾𝗍𝖾𝖽 𝗐𝗂𝗍𝗁𝗂𝗇 <u>5 𝗆𝗂𝗇𝗎𝗍𝖾.</u>**\n__𝖪𝗂𝗇𝖽𝗅𝗒 𝖿𝗈𝗋𝗐𝖺𝗋𝖽 𝗂𝗍 𝗍𝗈 𝗌𝖺𝗏𝖾𝖽 𝗆𝖾𝗌𝗌𝖺𝗀𝖾𝗌.__")
+        await asyncio.sleep(300)
+        await xd.delete()
+        await k.edit("<b>Your File/Video is successfully deleted!!!</b>")
+        return
     
     
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
