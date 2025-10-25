@@ -39,12 +39,4 @@ Added By - {}
 ID - <code>{}</code>
 Name - {}
 """
-    CUSTOM_FILE_CAPTION = """<b>𝐻𝑒𝑙𝑙𝑜 👋 {mention} 😍
-    
-{file_caption}
-
-╔═══ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═══╗ 
-➲ <a href='https://t.me/+KJHSwIdswKUwZjU1'>@OTT UPDTES</a>
-➲ <a href='https://t.me/+KJHSwIdswKUwZjU1'>@MAIN CHANNEL</a>
-╚═══ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═══╝
-</b>"""
+    CUSTOM_FILE_CAPTION = """<b>{file_name}</b>\n\n🔘 size - {file_size}"""
