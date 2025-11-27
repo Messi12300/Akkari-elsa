@@ -75,10 +75,8 @@ async def send_file(client, query, ident, file_id):
             f_caption = f_caption
     if f_caption is None:
         f_cation = f"{title}"
-    inline_keyboard = [[
-            InlineKeyboardButton('🖥 Oᴛᴛ Uᴩᴅᴀᴛᴇꜱ Cʜᴀɴɴᴇʟ 🖥', url=f'https://t.me/MCUupdatesLINKS')
-            ],[     
-            InlineKeyboardButton('⚙ Lᴀᴛᴇꜱᴛ Mᴏᴠɪᴇ Rᴇʟᴇᴀꜱᴇꜱ ⚙', url='https://t.me/+uA5gEKm8WXk1ZTll')
+    inline_keyboard = [[     
+            InlineKeyboardButton('Backup Group 📢', url='https://t.me/+t3HbRHXquXE3ODU1')
     ]]
     reply_markup = InlineKeyboardMarkup(inline_keyboard)
     ok = await client.send_cached_media(
@@ -393,10 +391,9 @@ async def start(client, message):
         file_id=file_id,
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Lᴀᴛᴇꜱᴛ Mᴏᴠɪᴇ Rᴇʟᴇᴀꜱᴇꜱ ⚙', url='https://t.me/MCUupdatesLINKS')
-            ],[
-            InlineKeyboardButton('🖥 Oᴛᴛ Uᴩᴅᴀᴛᴇꜱ Cʜᴀɴɴᴇʟ 🖥', url='https://t.me/+uA5gEKm8WXk1ZTll')
-            ]])
+        reply_markup=InlineKeyboardMarkup([[     
+            InlineKeyboardButton('Backup Group 📢', url='https://t.me/+t3HbRHXquXE3ODU1')
+    ]])
     )
     k = await message.reply_text("**⚠️ 𝖳𝗁𝗂𝗌 𝗆𝖾𝖽𝗂𝖺 𝗐𝗂𝗅𝗅 𝖻𝖾 𝖽𝖾𝗅𝖾𝗍𝖾𝖽 𝗐𝗂𝗍𝗁𝗂𝗇 <u>5 𝗆𝗂𝗇𝗎𝗍𝖾.</u>**\n__𝖪𝗂𝗇𝖽𝗅𝗒 𝖿𝗈𝗋𝗐𝖺𝗋𝖽 𝗂𝗍 𝗍𝗈 𝗌𝖺𝗏𝖾𝖽 𝗆𝖾𝗌𝗌𝖺𝗀𝖾𝗌.__")
     await asyncio.sleep(300)
