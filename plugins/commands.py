@@ -118,8 +118,8 @@ async def start(client, message):
             ]]      
         reply_markup = InlineKeyboardMarkup(buttons)
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_video(
-            video="https://envs.sh/FE4.mp4",
+        await message.reply_photo(
+            photo="https://telegra.ph/file/8f6c5ca006034e4a19b27.jpg",
             caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
@@ -206,8 +206,8 @@ async def start(client, message):
             ]]     
         reply_markup = InlineKeyboardMarkup(buttons)
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_video(
-            video="https://envs.sh/FE4.mp4",
+        await message.reply_photo(
+            photo="https://telegra.ph/file/8f6c5ca006034e4a19b27.jpg",
             caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
