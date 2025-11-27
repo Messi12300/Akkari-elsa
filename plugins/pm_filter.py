@@ -65,7 +65,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] ⊳ {file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}]  {file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -93,20 +93,20 @@ async def next_page(bot, query):
 
     if n_offset == '':
         btn.append(
-            [InlineKeyboardButton("↵ Bᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
+            [InlineKeyboardButton("Bᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
              InlineKeyboardButton(f"{math.ceil(offset / 10) + 1} / {math.ceil(total / 10)}",
                                   callback_data="pages")]
         )
     elif off_set is None:
         btn.append(
             [InlineKeyboardButton(f"{math.ceil(offset / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
-             InlineKeyboardButton("Nᴇxᴛ ⤷", callback_data=f"next_{req}_{key}_{n_offset}")])
+             InlineKeyboardButton("Nᴇxᴛ", callback_data=f"next_{req}_{key}_{n_offset}")])
     else:
         btn.append(
             [
-                InlineKeyboardButton("↵ Bᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
+                InlineKeyboardButton("Bᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
                 InlineKeyboardButton(f"{math.ceil(offset / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
-                InlineKeyboardButton("Nᴇxᴛ ⤷", callback_data=f"next_{req}_{key}_{n_offset}")
+                InlineKeyboardButton("Nᴇxᴛ", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
     try:
@@ -466,16 +466,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('🔗 OUR CHANELS LINKS 🔗', url=f'https://t.me/MC_CINEMAS')
-            ],[
-            InlineKeyboardButton('📌 MY GROUP', url=f'https://t.me/+vaGyiQirUt4xNDFk'),
-            InlineKeyboardButton('🛠 MY OWNER', url='https://t.me/Leomc_bot')
-            ],[      
-            InlineKeyboardButton('⚠️ ʜᴇʟᴘ', callback_data='help'),
-            InlineKeyboardButton('✨ ᴀʙᴏᴜᴛ', callback_data='about')
-            ],[
-            InlineKeyboardButton('➕ ADD ME TO YOUR GROUP ➕', url='https://t.me/MC_MONICA_bot?startgroup=true')
-        ]]       
+                    InlineKeyboardButton('𝖢𝗅𝗈𝗌𝖾 ❌', callback_data='close_data'),
+                    InlineKeyboardButton("𝖮𝗐𝗇𝖾𝗋 🔱", url='https://t.me/Leomc_bot')
+            ]]      
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
@@ -629,7 +622,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] ⊳ {file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}]  {file.file_name}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -667,7 +660,7 @@ async def auto_filter(client, msg, spoll=False):
         req = message.from_user.id if message.from_user else 0
         btn.append(
             [InlineKeyboardButton(text=f"1/{math.ceil(int(total_results) / 10)}", callback_data="pages"),
-            InlineKeyboardButton(text="Nᴇxᴛ ⤷", callback_data=f"next_{req}_{key}_{offset}")]
+            InlineKeyboardButton(text="Nᴇxᴛ", callback_data=f"next_{req}_{key}_{offset}")]
         )
     
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
@@ -782,7 +775,7 @@ async def advantage_spell_chok(msg):
         ]
         for k, movie_name in enumerate(movielist)
     ]
-    btn.append([InlineKeyboardButton(text="✘ ᴄʟᴏsᴇ ✘", callback_data=f'spolling#{reqstr1}#close_spellcheck')])
+    btn.append([InlineKeyboardButton(text="𝖢𝗅𝗈𝗌𝖾 ❌", callback_data=f'spolling#{reqstr1}#close_spellcheck')])
     spell_check_del = await msg.reply_text(
         text="I Cᴏᴜʟᴅɴ'ᴛ Fɪɴᴅ Aɴʏᴛʜɪɴɢ Rᴇʟᴀᴛᴇᴅ Tᴏ Tʜᴀᴛ. Dɪᴅ Yᴏᴜ Mᴇᴀɴ Aɴʏ Oɴᴇ Oғ Tʜᴇsᴇ?",
         reply_markup=InlineKeyboardMarkup(btn),
