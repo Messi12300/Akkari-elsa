@@ -14,17 +14,17 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'autodelete')
-API_ID = int(environ.get("API_ID", "19071424"))
-API_HASH = environ.get("API_HASH", "c4b3e298cc50fd4cc563ae75ee882948")
-BOT_TOKEN = environ.get("BOT_TOKEN", "7388438100:AAHE_r9c3E4Z0WscM63")
+API_ID = int(environ.get("API_ID", ""))
+API_HASH = environ.get("API_HASH", "")
+BOT_TOKEN = environ.get("BOT_TOKEN", "")
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
-PICS = (environ.get('PICS', 'https://envs.sh/LF5.jpg')).split()
+PICS = (environ.get('PICS', '')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7425490417 1509123054').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002252582164 -1002397004421').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_grp = environ.get('AUTH_GROUP')
@@ -52,7 +52,7 @@ pyroutils.MIN_CHAT_ID = -999999999999
 pyroutils.MIN_CHANNEL_ID = -100999999999999
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', "-1002276401285"))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ""))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1002354592029').split()]
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'mcumovies')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
