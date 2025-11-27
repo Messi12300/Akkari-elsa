@@ -353,7 +353,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if f_caption is None:
             f_caption = f"{title}"
         buttons = [[
-            InlineKeyboardButton('⚙ Lᴀᴛᴇꜱᴛ Mᴏᴠɪᴇ Rᴇʟᴇᴀꜱᴇꜱ ⚙', url='https://t.me/MCUupdatesLINKS')
+            InlineKeyboardButton('⚙ Lᴀᴛᴇꜱᴛ Mᴏᴠɪᴇ Rᴇʟᴇᴀꜱᴇꜱ ⚙', url='https://t.me/MCUupdatesLINK')
             
             ]]
         try:
@@ -395,7 +395,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if f_caption is None:
             f_caption = f"{title}"
         buttons = [[
-            InlineKeyboardButton('⚙ Lᴀᴛᴇꜱᴛ Mᴏᴠɪᴇ Rᴇʟᴇᴀꜱᴇꜱ ⚙', url='https://t.me/MCUupdatesLINKS')
+            InlineKeyboardButton('⚙ Lᴀᴛᴇꜱᴛ Mᴏᴠɪᴇ Rᴇʟᴇᴀꜱᴇꜱ ⚙', url='https://t.me/MCUupdatesLINK')
             
          ]]
         await query.answer()
@@ -406,7 +406,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             protect_content=True if ident == "checksubp" else False,
             reply_markup=InlineKeyboardMarkup(
                [[
-                InlineKeyboardButton('⚙ Lᴀᴛᴇꜱᴛ Mᴏᴠɪᴇ Rᴇʟᴇᴀꜱᴇꜱ ⚙', url='https://t.me/MCUupdatesLINKS')
+                InlineKeyboardButton('⚙ Lᴀᴛᴇꜱᴛ Mᴏᴠɪᴇ Rᴇʟᴇᴀꜱᴇꜱ ⚙', url='https://t.me/MCUupdatesLINK')
             
                ]]
             )  
@@ -414,7 +414,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if title and any(keyword in title.lower() for keyword in ['predvd', 'predvdrip']):
             f_caption += "\n⚠️<b><i>ഈ മൂവിയുടെ ഫയൽ എവിടെയെങ്കിലും ഫോർവേഡ് ചെയ്തു വെക്കുക എന്നിട്ട് ഡൗൺലോഡ് ചെയ്യുക\n\n3 മിനിറ്റിൽ ഇവിടുന്ന് ഡിലീറ്റ് ആവും🗑\n\n⚠️Forward the file of this Movie somewhere and download it\n\nWill be deleted from here in 3 minutes🗑</i></b>"
             inline_keyboard = [[
-            InlineKeyboardButton('⚙ Lᴀᴛᴇꜱᴛ Mᴏᴠɪᴇ Rᴇʟᴇᴀꜱᴇꜱ ⚙', url='https://t.me/MCUupdatesLINKS')
+            InlineKeyboardButton('⚙ Lᴀᴛᴇꜱᴛ Mᴏᴠɪᴇ Rᴇʟᴇᴀꜱᴇꜱ ⚙', url='https://t.me/MCUupdatesLINK')
             
             ]]
             reply_markup = InlineKeyboardMarkup(inline_keyboard)
