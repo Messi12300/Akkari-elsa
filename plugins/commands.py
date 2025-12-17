@@ -87,7 +87,7 @@ async def send_file(client, query, ident, file_id):
         protect_content=True if ident == 'checksubp' else False,
         reply_markup=reply_markup
     )    
-    k = await message.reply_text("**⚠️ 𝖳𝗁𝗂𝗌 𝗆𝖾𝖽𝗂𝖺 𝗐𝗂𝗅𝗅 𝖻𝖾 𝖽𝖾𝗅𝖾𝗍𝖾𝖽 𝗐𝗂𝗍𝗁𝗂𝗇 <u>5 𝗆𝗂𝗇𝗎𝗍𝖾.</u>**\n__𝖪𝗂𝗇𝖽𝗅𝗒 𝖿𝗈𝗋𝗐𝖺𝗋𝖽 𝗂𝗍 𝗍𝗈 𝗌𝖺𝗏𝖾𝖽 𝗆𝖾𝗌𝗌𝖺𝗀𝖾𝗌.__")
+    k = await message.reply_text(""<b><u>📁 𝗪𝗮𝗿𝗻𝗶𝗻𝗴 ⚠️</u><blockquote>Please note that this movie file will be deleted in <u>5 minutes </u>to avoid Copyright. To keep it, forward it to a friend or save it to your personal space.</blockquote><u>📁 അറിയിപ്പ് ⚠️</u><blockquote>അയച്ച ഫയലുകൾ കോപ്പി റൈറ്റ് ഒഴിവാക്കാൻ വേണ്ടി <u>5 മിനിറ്റിനു </u>ശേഷം ഡിലീറ്റ് ചെയ്യുന്നതാണ്. അതുകൊണ്ട് ഫയൽ സേവ്ഡ് മെസ്സേജ്സിലേക്ക് മാറ്റേണ്ടതാണ്.</blockquote></b>"")
     await asyncio.sleep(300)
     await ok.delete()
     await k.edit("<b>Your File/Video is successfully deleted!!!</b>")
